@@ -7,18 +7,44 @@
 	padding: 0;
 }
 
+html {
+	scroll-padding-top: 82px;
+}
 body {
 	position: relative;
 	font-family: "Montserrat", sans-serif;
 	background-color: #666;
 }
 
-.blue-text {
-	color: $nav-active;
+//section title
+h2 {
+	text-align: center;
+	text-transform: uppercase;
 }
 
+//underline section title
+.underline {
+	margin: 20px auto 40px;
+	width: 60px;
+	height: 4px;
+	background-color: $main-color;
+}
+
+//colorized text in the title
+.blue-text {
+	color: $main-color;
+}
+
+//shadow on the nav after window.scrollY >= 200
+.shadow-bg {
+	background-color: rgba(0, 0, 0, 0.8);
+	transition: background-color 0.6s;
+}
+
+// Navigation
 nav {
 	text-transform: uppercase;
+	transition: background-color 0.6s;
 	z-index: 1;
 
 	.nav-link,
@@ -27,7 +53,7 @@ nav {
 	}
 
 	.nav-link:hover {
-		color: $nav-active;
+		color: $main-color;
 	}
 	.navbar-brand {
 		font-weight: bold;
@@ -35,7 +61,7 @@ nav {
 	}
 
 	.active {
-		color: $nav-active;
+		color: $main-color;
 	}
 
 	.fa-bars {
@@ -43,15 +69,18 @@ nav {
 	}
 }
 
+// Header & bg image
 header {
 	color: $white;
 
 	h1 {
+		font-size: 30px;
 		text-transform: uppercase;
 		z-index: 1;
 	}
 
 	p {
+		font-size: 14px;
 		z-index: 1;
 	}
 
@@ -96,6 +125,111 @@ header {
 		left: 50%;
 		transform: translate(-50%);
 		color: $white;
+	}
+}
+
+// About us section
+.aboutus {
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.aboutus-hover {
+		transition: color 0.5s;
+	}
+
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+.aboutus-hero {
+	position: relative;
+	color: $light-gray;
+	background-image: url(../img/about-small.jpg);
+	background-position: center;
+	background-size: cover;
+	z-index: 0;
+
+	.aboutus-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.6);
+		z-index: -1;
+	}
+
+	i {
+		margin-top: 20px;
+		font-size: 30px;
+	}
+
+	.aboutus-card-title {
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+
+	.aboutus-card-text {
+		font-size: 14px;
+	}
+
+	.aboutus-hover {
+		transition: color 0.5s;
+	}
+
+	.aboutus-hover:hover {
+		color: $main-color;
+	}
+}
+
+// Media query
+@media (min-width: 375px) {
+	header {
+		h1 {
+			font-size: 36px;
+		}
+
+		p {
+			font-size: 16px;
+		}
+	}
+}
+
+@media (min-width: 768px) {
+	header {
+		h1 {
+			font-size: 48px;
+		}
+
+		p {
+			font-size: 20px;
+		}
+	}
+}
+
+@media (min-width: 992px) {
+	html {
+		scroll-padding-top: 72px;
+	}
+
+	.aboutus-hero {
+		position: relative;
+		color: $light-gray;
+		background-image: url(../img/about-big.jpg);
+		background-position: center;
+		background-size: cover;
+		z-index: 0;
 	}
 }
 
