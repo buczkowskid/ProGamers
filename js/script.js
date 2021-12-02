@@ -3,6 +3,9 @@ document.addEventListener("DOMContentLoaded", function () {
 	const nav = document.querySelector(".navbar");
 	const navShow = document.querySelector(".navbar-collapse");
 	const navItems = document.querySelector(".navbar-nav");
+	// var myCarousel = document.querySelector("#portfolioCarousel");
+	// var carousel = new bootstrap.Carousel(myCarousel, {interval: 200
+	// wrap: false});
 
 	//Adding shadow on the navigation
 	function addShadow() {

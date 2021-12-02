@@ -23,7 +23,7 @@
 			crossorigin="anonymous"
 		></script>
 	</head>
-	<body data-bs-spy="scroll" data-bs-target="#navbar">
+	<body data-bs-spy="scroll" data-bs-target="#navbar" data-bs-offset="83">
 		<nav
 			id="navbar"
 			class="navbar navbar-expand-lg position-fixed top-0 w-100 py-3"
@@ -47,7 +47,7 @@
 				</button>
 				<div class="collapse navbar-collapse" id="navbarNavAltMarkup">
 					<div class="navbar-nav ms-auto">
-						<a class="nav-link active" href="#">Home</a>
+						<a class="nav-link active" href="#home">Home</a>
 						<a class="nav-link" href="#aboutus">o nas</a>
 						<a class="nav-link" href="#portfolio">portfolio</a>
 						<a class="nav-link" href="#prices">ceny</a
@@ -58,7 +58,7 @@
 				</div>
 			</div>
 		</nav>
-		<header>
+		<header id="home">
 			<div class="hero-img">
 				<div class="hero-shadow"></div>
 				<div class="hero-text">
@@ -139,8 +139,182 @@
 					</div>
 				</div>
 			</section>
-			<section id="portfolio" class="portfolio">
-				<div class="container"></div>
+
+			<!-- PORTFOLIO DESKTOP -->
+
+			<section id="portfolio" class="portfolio py-5">
+				<h2>portfolio</h2>
+				<div class="underline"></div>
+				<div class="container">
+					<div
+						id="carouselExampleCaptions"
+						class="carousel slide d-none d-lg-block"
+						data-bs-ride="carousel"
+					>
+						<div class="carousel-indicators">
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="0"
+								class="active"
+								aria-current="true"
+								aria-label="Slide 1"
+							></button>
+							<button
+								type="button"
+								data-bs-target="#carouselExampleCaptions"
+								data-bs-slide-to="1"
+								aria-label="Slide 2"
+							></button>
+						</div>
+						<div class="carousel-inner">
+							<div class="carousel-item active">
+								<img
+									src="./img/football-big.jpg"
+									class="d-block w-100"
+									alt="Okładka gry Pro football"
+								/>
+								<div class="carousel-caption d-none d-md-block">
+									<h5>Pro football</h5>
+									<p>
+										Some representative placeholder content for the first slide.
+									</p>
+								</div>
+							</div>
+							<div class="carousel-item">
+								<img
+									src="./img/racing-big.jpg"
+									class="d-block w-100"
+									alt="Okładka gry Racing GT"
+								/>
+								<div class="carousel-caption d-none d-md-block">
+									<h5>racing gt</h5>
+									<p>
+										Some representative placeholder content for the second
+										slide.
+									</p>
+								</div>
+							</div>
+						</div>
+						<button
+							class="carousel-control-prev"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="prev"
+						>
+							<span
+								class="carousel-control-prev-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Previous</span>
+						</button>
+						<button
+							class="carousel-control-next"
+							type="button"
+							data-bs-target="#carouselExampleCaptions"
+							data-bs-slide="next"
+						>
+							<span
+								class="carousel-control-next-icon"
+								aria-hidden="true"
+							></span>
+							<span class="visually-hidden">Next</span>
+						</button>
+					</div>
+				</div>
+
+				<!-- PORTFOLIO MOBILE -->
+
+				<div class="container">
+					<div class="card-group d-lg-none d-xl-none d-xxl-none">
+						<div class="card me-sm-3">
+							<img
+								src="./img/football-small.jpg"
+								class="card-img-top"
+								alt="Okładka gry Pro football"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">pro football</h5>
+								<p class="card-text">
+									Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+								</p>
+							</div>
+						</div>
+						<div class="card">
+							<img
+								src="./img/racing-small.jpg"
+								class="card-img-top"
+								alt="Okładka gry Racing GT"
+							/>
+							<div class="card-body">
+								<h5 class="card-title">racing gt</h5>
+								<p class="card-text">
+									Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+									Fugit, dolorum.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section id="prices" class="prices py-5 bg-light">
+				<h2>Ceny</h2>
+				<div class="underline"></div>
+				<div class="container">
+					<div class="price-wrap row text-center justify-content-center">
+						<div class="col-md-6 col-xl-4 text-center">
+							<div class="price-box">
+								<h3>mobile</h3>
+								<div class="underline-price"></div>
+								<p>Urządzenia: <i class="fas fa-mobile-alt"></i></p>
+								<p>Długość gry: Krótka</p>
+								<p>Grafika: Średnia</p>
+								<p>Online: Brak</p>
+								<p class="price-tag">499zł</p>
+								<button type="button" class="btn btn-secondary">
+									Zamawiam
+								</button>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-4 text-center">
+							<div class="price-box">
+								<h3>mobile & pc</h3>
+								<div class="underline-price"></div>
+								<p>
+									Urządzenia: <i class="fas fa-mobile-alt"></i
+									><i class="fas fa-desktop"></i>
+								</p>
+								<p>Długość gry: Średnia</p>
+								<p>Grafika: Wysoka</p>
+								<p>Online: Tak</p>
+								<p class="price-tag">2499zł</p>
+								<button type="button" class="btn btn-primary">Zamawiam</button>
+							</div>
+						</div>
+						<div class="col-md-6 col-xl-4 text-center">
+							<div class="price-box">
+								<h3>full pack</h3>
+								<div class="underline-price"></div>
+								<p>
+									Urządzenia: <i class="fas fa-mobile-alt"></i
+									><i class="fas fa-desktop"></i><i class="fas fa-gamepad"></i>
+								</p>
+								<p>Długość gry: Długa</p>
+								<p>Grafika: Najlepsza</p>
+								<p>Online: Tak</p>
+								<p class="price-tag">4999zł</p>
+								<button type="button" class="btn btn-secondary">
+									Zamawiam
+								</button>
+							</div>
+						</div>
+					</div>
+					<p class="price-footer">
+						Lorem ipsum dolor sit amet. <a href="#contact">skontaktuj się</a> Lorem
+						ipsum dolor sit.
+					</p>
+				</div>
 			</section>
 		</main>
 		<div style="height: 80vh"></div>

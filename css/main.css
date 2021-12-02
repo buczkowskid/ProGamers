@@ -14,7 +14,7 @@ html {
 body {
   position: relative;
   font-family: "Montserrat", sans-serif;
-  background-color: #666;
+  background-color: #ebecf2;
 }
 
 h2 {
@@ -98,7 +98,7 @@ header .hero-shadow {
   z-index: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.3);
+  background-color: rgba(0, 0, 0, 0.55);
 }
 
 header .hero-text {
@@ -200,12 +200,116 @@ header .fa-chevron-down {
   color: #60a0fa;
 }
 
+.portfolio .slide {
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 80%;
+}
+
+.portfolio .carousel-item {
+  position: relative;
+  height: 400px;
+}
+
+.portfolio .carousel-caption {
+  position: absolute;
+  height: 120px;
+  left: 0;
+  right: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 20px 0;
+}
+
+.portfolio .carousel-caption h5 {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.portfolio .carousel-indicators {
+  padding-bottom: 20px;
+}
+
+.prices .price-box {
+  margin: 20px 10px;
+  padding-top: 20px;
+  background-color: #fff;
+  -webkit-box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+          box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+  -webkit-transition: scale 0.2s ease-in-out;
+  transition: scale 0.2s ease-in-out;
+}
+
+.prices .price-box h3 {
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.prices .price-box i {
+  font-weight: bold;
+  font-size: 20px;
+  padding: 0 4px;
+}
+
+.prices .price-box .underline-price {
+  margin: 20px auto 40px;
+  width: 300px;
+  height: 2px;
+  background-color: #60a0fa;
+}
+
+.prices .price-box .price-tag {
+  font-weight: bold;
+  font-size: 26px;
+}
+
+.prices .price-box button {
+  margin-bottom: 30px;
+  padding: 10px;
+  text-transform: uppercase;
+}
+
+.prices .price-footer {
+  text-align: center;
+  padding-top: 40px;
+}
+
+.prices .price-box:hover {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 @media (min-width: 375px) {
   header h1 {
     font-size: 36px;
   }
   header p {
     font-size: 16px;
+  }
+  .portfolio .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .portfolio .card .card-img-top {
+    height: 30%;
+  }
+  .portfolio .card h5 {
+    text-align: center;
+    text-transform: uppercase;
   }
 }
 
@@ -216,11 +320,29 @@ header .fa-chevron-down {
   header p {
     font-size: 20px;
   }
+  .portfolio .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .portfolio .card .card-img-top {
+    height: 50%;
+  }
+  .portfolio .card h5 {
+    text-align: center;
+    text-transform: uppercase;
+  }
 }
 
 @media (min-width: 992px) {
-  html {
-    scroll-padding-top: 72px;
+  nav {
+    height: 82px;
   }
   .aboutus-hero {
     position: relative;
@@ -243,6 +365,9 @@ header .fa-chevron-down {
   }
   header .hero-text {
     font-size: 1.2rem;
+  }
+  .prices .price-footer {
+    font-size: 18px;
   }
 }
 /*# sourceMappingURL=main.css.map */
