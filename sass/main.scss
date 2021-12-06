@@ -1,4 +1,6 @@
 @import "colors";
+@import "animation";
+
 *,
 *::before,
 *::after {
@@ -234,7 +236,7 @@ header {
 		padding-top: 20px;
 		background-color: $white;
 		box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
-		transition: scale 0.2s ease-in-out;
+		transition: transform 0.3s ease-in-out;
 
 		h3 {
 			text-transform: uppercase;
@@ -249,7 +251,7 @@ header {
 
 		.underline-price {
 			margin: 20px auto 40px;
-			width: 300px;
+			width: 90%;
 			height: 2px;
 			background-color: $main-color;
 		}
@@ -269,6 +271,7 @@ header {
 	.price-footer {
 		text-align: center;
 		padding-top: 40px;
+		text-decoration: none;
 	}
 
 	.price-box:hover {
@@ -276,6 +279,139 @@ header {
 	}
 }
 
+// Team section
+.team {
+	position: relative;
+	background-image: url(../img/office-big.jpg);
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed;
+	z-index: 0;
+
+	.team-shadow {
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(0, 0, 0, 0.55);
+		z-index: -1;
+	}
+
+	h2 {
+		position: relative;
+		color: $bg-color;
+		z-index: 1;
+	}
+
+	.underline {
+		position: relative;
+		z-index: 1;
+	}
+
+	.card {
+		position: relative;
+		margin: 0 auto;
+		z-index: 5;
+		transition: transform 0.3s ease-in-out;
+
+		img {
+			height: 300px;
+			object-fit: cover;
+		}
+
+		.card-body {
+			height: 160px;
+			h5 {
+				margin-bottom: 20px;
+				text-align: center;
+				text-transform: uppercase;
+			}
+		}
+
+		.card-footer {
+			.text-muted {
+				display: flex;
+				align-items: center;
+				justify-content: space-around;
+
+				i {
+					color: $main-color;
+				}
+			}
+		}
+	}
+
+	.card:hover {
+		transform: scale(0.95);
+	}
+}
+
+// Achievements section
+
+.achievements {
+	.achievements-icon {
+		i {
+			font-size: 24px;
+		}
+	}
+	.achievement-card-text {
+		text-transform: uppercase;
+		font-size: 12px;
+	}
+}
+
+// Contact section
+
+.contact {
+	position: relative;
+	background-image: url(../img/footer-bg.jpg);
+	background-position: center;
+	background-attachment: fixed;
+	z-index: -1;
+
+	h3 {
+		position: relative;
+		color: $bg-color;
+		z-index: 1;
+		text-transform: uppercase;
+		padding-bottom: 20px;
+	}
+	h2,
+	p {
+		position: relative;
+		color: $bg-color;
+		z-index: 1;
+	}
+
+	a {
+		cursor: pointer;
+		z-index: 1;
+		font-size: 22px;
+	}
+
+	i {
+		position: relative;
+		padding: 0 10px;
+		color: $bg-color;
+		z-index: 1;
+		font-size: 22px;
+	}
+
+	.underline {
+		position: relative;
+		background-color: $bg-color;
+		z-index: 1;
+	}
+
+	.contact-shadow {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		background-color: rgba(0, 0, 0, 0.55);
+		z-index: 0;
+	}
+}
 // Media query
 
 @media (min-width: 375px) {
@@ -346,6 +482,12 @@ header {
 		background-position: center;
 		background-size: cover;
 		z-index: 0;
+	}
+
+	.achievements-icon {
+		i {
+			font-size: 50px;
+		}
 	}
 }
 
